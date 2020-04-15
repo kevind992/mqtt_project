@@ -1,5 +1,9 @@
 package ie.mqtt.java;
-
+/**
+ * 
+ * @author Kevin Delassus
+ *  
+ */
 public class ShutdownCommand implements Command {
 
 private Client client;

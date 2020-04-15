@@ -1,5 +1,9 @@
 package ie.mqtt.java;
-
+/**
+ * 
+ * @author Kevin Delassus
+ *
+ */
 public class LightOnCommand implements Command{
 
 	private Client client;
@@ -10,6 +14,9 @@ public class LightOnCommand implements Command{
 	
 	public void execute() {
 		System.out.println("Light Off Command");
-		client.publish("On Command");
+		synchronized (client) {
+			client.publish("On Command");
+		}
+		
 	}
 }

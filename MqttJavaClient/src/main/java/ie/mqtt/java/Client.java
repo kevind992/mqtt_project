@@ -4,7 +4,13 @@ import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.MqttPersistenceException;
-
+/**
+ * 
+ * @author Kevin Delassus
+ * @brief Client is a singleton which handles all communication
+ * with the Mqtt broker. 
+ * currently all that is being sent is a string command 
+ */
 public class Client {
 	
 	private static Client instance = null;
