@@ -1,5 +1,7 @@
 package ie.mqtt.java;
-
+/**
+ * @author Kevin Delassus
+ */
 public class LightOffCommand implements Command {
 	
 	private Client client;
@@ -10,6 +12,9 @@ public class LightOffCommand implements Command {
 	
 	public void execute() {
 		System.out.println("Light Off Command");
-		client.publish("Off command");	
+		synchronized (client) {
+			client.publish("Off Command");	
+		}
+		
 	}
 }

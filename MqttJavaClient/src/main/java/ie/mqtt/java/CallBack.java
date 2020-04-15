@@ -3,7 +3,11 @@ package ie.mqtt.java;
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
-
+/**
+ * 
+ * @author Kevin Delassus
+ *
+ */
 public class CallBack implements MqttCallback{
 
 	public void connectionLost(Throwable cause) {
